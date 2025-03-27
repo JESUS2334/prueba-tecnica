@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="date-picker-container">
+    <mat-form-field appearance="outline">
+      <mat-label>Selecciona una fecha</mat-label>
+      <input matInput [matDatepicker]="picker" (dateChange)="onDateChange($event)" />
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  
+  <div class="chart-container" *ngIf="data.length">
+    <ngx-charts-line-chart
+      [view]="[700, 400]"
+      [scheme]="colorScheme"
+      [results]="data"
+      [gradient]="true"
+      [xAxis]="true"
+      [yAxis]="true"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Hora'"
+      [yAxisLabel]="'Valor'">
+    </ngx-charts-line-chart>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

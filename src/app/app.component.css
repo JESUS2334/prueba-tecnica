@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .date-picker-container {
+    margin-bottom: 30px; 
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .chart-container {
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  mat-datepicker-toggle {
+    color: #1976d2; 
+  }
+  
+  ngx-charts-line-chart {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+  }
+  
